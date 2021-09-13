@@ -1,0 +1,19 @@
+{
+    "name": "walnut/lib_dbquerybuilder",
+    "authors": [
+        {
+            "name": "Marian Kostadinov",
+            "email": "manchokapitancho@gmail.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"Walnut\\Lib\\DbQueryBuilder\\": "src/"
+		}
+	},
+	"require": {},
+	"require-dev": {
+		"vimeo/psalm": "^4.9.3",
+		"phpunit/phpunit": "^9.5.9"
+	}
+}
