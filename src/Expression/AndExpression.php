@@ -11,7 +11,7 @@ final class AndExpression implements SqlExpression {
 	/**
 	 * @var SqlExpression[]
 	 */
-	private /*readonly*/ array $expressions;
+	private readonly array $expressions;
 	public function __construct(SqlExpression ...$expressions) {
 		$this->expressions = $expressions;
 	}

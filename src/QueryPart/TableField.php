@@ -10,8 +10,8 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 final class TableField {
 	private const SQL_TEMPLATE = "%s.%s";
 	public function __construct(
-		private /*readonly*/ string $tableAlias,
-		private /*readonly*/ string $fieldName
+		private readonly string $tableAlias,
+		private readonly string $fieldName
 	) {}
 
 	public function build(SqlQuoter $quoter): string {

@@ -10,10 +10,10 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 final class TableJoin {
 	private const JOIN_TEMPLATE = "%s JOIN %s %s ON %s";
 	public function __construct(
-		private /*readonly*/ string $tableAlias,
-		private /*readonly*/ string $tableName,
-		private /*readonly*/ QueryFilter $queryFilter,
-		private /*readonly*/ bool $isLeftJoin = false
+		private readonly string $tableAlias,
+		private readonly string $tableName,
+		private readonly QueryFilter $queryFilter,
+		private readonly bool $isLeftJoin = false
 	) {}
 
 	public function build(SqlQuoter $quoter): string {

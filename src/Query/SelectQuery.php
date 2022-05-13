@@ -27,12 +27,12 @@ final class SelectQuery {
 	 * @param SelectLimit|null $selectLimit
 	 */
 	public function __construct(
-		public /*readonly*/ string $tableName,
-		public /*readonly*/ array $fields,
-		public /*readonly*/ array $joins,
-		public /*readonly*/ QueryFilter $queryFilter,
-		public /*readonly*/ array $orderBy = [],
-		public /*readonly*/ ?SelectLimit $selectLimit = null
+		public readonly string $tableName,
+		public readonly array $fields,
+		public readonly array $joins,
+		public readonly QueryFilter $queryFilter,
+		public readonly array $orderBy = [],
+		public readonly ?SelectLimit $selectLimit = null
 	) {
 		if (!count($this->fields)) {
 			throw new \InvalidArgumentException("A select query must have at least one value specified");

@@ -9,7 +9,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
  */
 final class OrderByAscending {
 	public function __construct(
-		private /*readonly*/ string $fieldName
+		private readonly string $fieldName
 	) {}
 
 	public function build(SqlQuoter $quoter): string {

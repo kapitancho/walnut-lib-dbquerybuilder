@@ -9,7 +9,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
  */
 final class NotExpression implements SqlExpression {
 	public function __construct(
-		private /*readonly*/ SqlExpression $expression
+		private readonly SqlExpression $expression
 	) {}
 	public function build(SqlQuoter $quoter): string {
 		return 'NOT (' . $this->expression->build($quoter) . ')';

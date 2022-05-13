@@ -19,9 +19,9 @@ final class UpdateQuery {
 	 * @param QueryFilter $queryFilter
 	 */
 	public function __construct(
-		public /*readonly*/ string $tableName,
-		public /*readonly*/ array $values,
-		public /*readonly*/ QueryFilter $queryFilter
+		public readonly string $tableName,
+		public readonly array $values,
+		public readonly QueryFilter $queryFilter
 	) {
 		if (!count($this->values)) {
 			throw new \InvalidArgumentException("An update query must have at least one value specified");

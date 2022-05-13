@@ -17,8 +17,8 @@ final class InsertQuery {
 	 * @param non-empty-array<string, SqlQueryValue> $values
 	 */
 	public function __construct(
-		public /*readonly*/ string $tableName,
-		public /*readonly*/ array $values
+		public readonly string $tableName,
+		public readonly array $values
 	) {
 		if (!count($this->values)) {
 			throw new \InvalidArgumentException("An insert query must have at least one value specified");

@@ -10,7 +10,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
  */
 final class QueryFilter {
 	public function __construct(
-		private /*readonly*/ SqlExpression $sqlExpression
+		private readonly SqlExpression $sqlExpression
 	) {}
 
 	public function build(SqlQuoter $quoter): string {

@@ -11,8 +11,8 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 final class DeleteQuery {
 	private const DELETE_QUERY_TEMPLATE = "DELETE FROM %s WHERE %s";
 	public function __construct(
-		public /*readonly*/ string $tableName,
-		public /*readonly*/ QueryFilter $queryFilter
+		public readonly string $tableName,
+		public readonly QueryFilter $queryFilter
 	) {}
 
 	public function build(SqlQuoter $quoter): string {

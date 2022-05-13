@@ -13,9 +13,9 @@ final class FieldExpression implements SqlExpression {
 	public const VALID_OPS = ['=', '<=>', '!=', '<>', '<', '>', 'LIKE', 'NOT LIKE', 'REGEXP']; //TODO: 8.1 ENUM
 	private const SQL_TEMPLATE = '%s %s %s';
 	public function __construct(
-		private /*readonly*/ string|TableField $fieldName,
-		private /*readonly*/ string $op,
-		private /*readonly*/ string|TableField|SqlQueryValue $value
+		private readonly string|TableField $fieldName,
+		private readonly string $op,
+		private readonly string|TableField|SqlQueryValue $value
 	) {
 		if (!in_array($this->op, self::VALID_OPS)) {
 			throw new \InvalidArgumentException("Invalid expression operation: $this->op");

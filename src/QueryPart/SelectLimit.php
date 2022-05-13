@@ -7,8 +7,8 @@ namespace Walnut\Lib\DbQueryBuilder\QueryPart;
  */
 final class SelectLimit {
 	public function __construct(
-		private /*readonly*/ int $limit,
-		private /*readonly*/ int $offset
+		private readonly int $limit,
+		private readonly int $offset
 	) {}
 
 	public function build(): string {
