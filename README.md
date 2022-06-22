@@ -54,17 +54,16 @@ $sqb = new SelectQuery(
     ],
     [
         new TableJoin("p", "projects", new QueryFilter(
-            new FieldExpression(
+            FieldExpression::equals(
                 new TableField("_", "id"),
-                '=',
                 new TableField("p", "client_id"),
             )
         ))
     ],
     $queryFilter,
     [
-        new OrderByAscending('id'),
-        new OrderByDescending('name')
+        OrderBy::ascending('id'),
+        OrderBy::descending('name')
     ],
     SelectLimit::forPage(3, 20)
 );

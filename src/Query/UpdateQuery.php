@@ -9,7 +9,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 /**
  * @package Walnut\Lib\DbQueryBuilder
  */
-final class UpdateQuery {
+final class UpdateQuery implements Query {
 	private const UPDATE_QUERY_TEMPLATE = "UPDATE %s SET %s WHERE %s";
 
 	/**

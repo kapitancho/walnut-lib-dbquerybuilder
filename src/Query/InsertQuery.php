@@ -8,7 +8,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 /**
  * @package Walnut\Lib\DbQueryBuilder
  */
-final class InsertQuery {
+final class InsertQuery implements Query {
 	private const INSERT_QUERY_TEMPLATE = "INSERT INTO %s (%s) VALUES (%s)";
 
 	/**

@@ -8,7 +8,7 @@ use Walnut\Lib\DbQueryBuilder\Quoter\SqlQuoter;
 /**
  * @package Walnut\Lib\DbQueryBuilder
  */
-final class DeleteQuery {
+final class DeleteQuery implements Query {
 	private const DELETE_QUERY_TEMPLATE = "DELETE FROM %s WHERE %s";
 	public function __construct(
 		public readonly string $tableName,
