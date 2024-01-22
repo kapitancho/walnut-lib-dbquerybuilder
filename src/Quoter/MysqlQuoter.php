@@ -11,7 +11,8 @@ final class MysqlQuoter implements SqlQuoter {
 	private const ESCAPED_IDENTIFIER_CHAR = '``';
 
 	private const VALUE_CHAR = "'";
-	private const ESCAPED_VALUE_CHAR = "''";
+	private const VALUE_CHARS = ['\\', "'", '"', "\0", "\n", "\r"];
+	private const ESCAPED_VALUE_CHARS = ['\\\\', "\\'", '\\"', "\\0", "\\n", "\\r"];
 
 	public function quoteIdentifier(string $identifier): string {
 		return self::IDENTIFIER_CHAR . str_replace(
@@ -27,8 +28,8 @@ final class MysqlQuoter implements SqlQuoter {
 			'boolean' => $value ? '1' : '0',
 			'string' =>
 				self::VALUE_CHAR . str_replace(
-					self::VALUE_CHAR,
-					self::ESCAPED_VALUE_CHAR,
+					self::VALUE_CHARS,
+					self::ESCAPED_VALUE_CHARS,
 					$value
 				) . self::VALUE_CHAR,
 			default => (string)$value
